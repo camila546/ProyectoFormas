@@ -18,6 +18,13 @@ public class Equilatero extends Triangulo {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Equilatero)) return false;
+        return super.equals(o);
+    }
+
+    @Override
     public String toString() {
         return "Equilatero{" +
                 "lado1=" + lado1 +

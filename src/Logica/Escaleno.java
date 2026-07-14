@@ -16,6 +16,12 @@ public class Escaleno extends Triangulo {
         System.out.println("Area: " + calcularArea());
         System.out.println("Perimetro: " + calcularPerimetro());
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Escaleno)) return false;
+        return super.equals(o);
+    }
 
     @Override
     public String toString() {

@@ -38,9 +38,20 @@ public abstract class Triangulo  extends Figura {
     @Override
     public double calcularArea() {
         double semiperimetro=calcularPerimetro() /2;
-        return Math.sqrt(semiperimetro *(semiperimetro-lado1)*(semiperimetro-lado2)*semiperimetro-lado3);
+        return Math.sqrt(semiperimetro *(semiperimetro-lado1)*(semiperimetro-lado2)*(semiperimetro-lado3));
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Triangulo)) return false;
+
+        Triangulo t = (Triangulo) o;
+
+        return Double.compare(lado1, t.lado1) == 0 &&
+                Double.compare(lado2, t.lado2) == 0 &&
+                Double.compare(lado3, t.lado3) == 0;
+    }
     @Override
     public double calcularPerimetro() {
         return lado1+lado2+lado3;

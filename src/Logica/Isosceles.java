@@ -18,6 +18,13 @@ public class Isosceles extends Triangulo {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Isosceles)) return false;
+        return super.equals(o);
+    }
+
+    @Override
     public String toString() {
         return "Isosceles{" +
                 "lado1=" + lado1 +
